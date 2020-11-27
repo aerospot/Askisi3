@@ -1,23 +1,41 @@
 public class HomeAppliancesStore {
-    static String name;
-    static String address;
-    static int employee;
+
+    public static String name;
+    public static String address;
+    public static int employee;
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+
+    public void setAddress(String address){
+        this.address = address;
+    }
+    public String getAddress(){
+        return address;
+    }
+
+    public void setEmployee(int employee){
+        this.employee = employee;
+    }
+
+    public Integer getEmployee(){
+        return employee;
+    }
 
     public static void main(String[] args){
-        name = args[0];
-        address = args[1];
 
-        System.out.printf("To onoma tis eterias einai: %s\n", name);
-        System.out.printf("I diefthinsi tis eterias einai: %s\n", address);
-        System.out.printf("I ipalili tis eterias einai: %d\n\n", employee);
 
-        if (name == null){
-            System.out.println("Ipirje lathos me tin metavliti 'name' dioti eihe tin timi null");
-        }
-        if (address == null){
-            System.out.println("Ipirje lathos me tin metavliti 'address' dioti eihe tin timi null\n");
-        }
+        HomeAppliancesStore Alpha = new HomeAppliancesStore();
+        Alpha.setName(args[0]);
+        Alpha.setAddress(args[1]);
+        Alpha.setEmployee(Integer.parseInt(args[2]));
+
+
+        System.out.println("Name:"+ name +"\tAddress:"+address+"\tEmployee:"+employee);
 
     }
 }
-
